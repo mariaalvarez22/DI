@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+import sys
+from PySide6.QtWidgets import QApplication, QMainWindow
+from Repaso8 import Ui_MainWindow  # Cambia 'Repaso8' por el nombre de tu archivo .py
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    ventana = QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(ventana)
+
+    # --- Conectar los botones para mostrar cada capa ---
+    ui.Boton1.clicked.connect(lambda: ui.stackedWidget.setCurrentIndex(2))  # Capa 1
+    ui.boton2.clicked.connect(lambda: ui.stackedWidget.setCurrentIndex(0))  # Capa 2
+    ui.Boton3.clicked.connect(lambda: ui.stackedWidget.setCurrentIndex(1))  # Capa 3
+
+    ventana.show()
+    sys.exit(app.exec())
