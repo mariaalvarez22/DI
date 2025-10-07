@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+import sys
+from PySide6.QtWidgets import QApplication, QMainWindow
+from Repaso7 import Ui_MainWindow  # Cambia 'Repaso7' por el nombre de tu archivo .py si es distinto
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    # Crear ventana principal
+    ventana = QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(ventana)
+
+    # Mostrar la ventana
+    ventana.show()
+
+    # Ejecutar la aplicación
+    sys.exit(app.exec())
