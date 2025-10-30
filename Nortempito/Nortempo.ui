@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>784</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>5</width>
+    <height>11</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolTip">
+   <string>Salir de la aplicacion</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDar_de_comer">
+    <property name="title">
+     <string>MENU</string>
+    </property>
+    <addaction name="act_Informacion"/>
+    <addaction name="action_Contacto"/>
+    <addaction name="actionVolver_al_Inicio"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuDar_de_comer"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>5</horstretch>
+     <verstretch>3</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>5</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="act_Informacion"/>
+   <addaction name="action_Contacto"/>
+   <addaction name="actionVolver_al_Inicio"/>
+   <addaction name="actionSalir"/>
+  </widget>
+  <action name="act_Informacion">
+   <property name="icon">
+    <iconset>
+     <normaloff>IconoInfo.png</normaloff>IconoInfo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Informacion DAM/DAW</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_Contacto">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconoContacto.png</normaloff>iconoContacto.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contacto</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionVolver_al_Inicio">
+   <property name="icon">
+    <iconset>
+     <normaloff>IconoVolver.png</normaloff>IconoVolver.png</iconset>
+   </property>
+   <property name="text">
+    <string>Volver al Inicio        </string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset>
+     <normaloff>IconoSalir.png</normaloff>IconoSalir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
