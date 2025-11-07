@@ -20,3 +20,4 @@ class SearchWidget(QWidget):
         self.search.text.textChanged.connect(lambda t: self.lbl.setText(f"{len(t)} caracteres"))
         v.addWidget(self.search)
         v.addWidget(self.lbl)
+
