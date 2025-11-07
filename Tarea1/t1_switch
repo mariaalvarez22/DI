@@ -1,0 +1,42 @@
+import sys
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QCheckBox
+
+class SwitchDemo(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Mini-tarea 1 — QCheckBox → Switch")
+
+        # Crear el checkbox
+        self.chkSwitch = QCheckBox("OFF", self)
+        self.chkSwitch.setObjectName("chkSwitch")
+
+        # Aplicar el estilo (convertir QCheckBox en un switch)
+        self.chkSwitch.setStyleSheet("""
+        QCheckBox::indicator {
+            width: 46px;
+            height: 24px;
+        }
+        QCheckBox::indicator:unchecked {
+            border-radius: 12px;
+            background: #ccc;
+        }
+        QCheckBox::indicator:checked {
+            border-radius: 12px;
+            background: #2ecc71;
+        }
+        """)
+
+        # Conectar el evento para cambiar el texto
+        self.chkSwitch.toggled.connect(lambda s: self.chkSwitch.setText("ON" if s else "OFF"))
+
+        # Layout
+        layout = QVBoxLayout(self)
+        layout.addWidget(self.chkSwitch)
+        self.setLayout(layout)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    w = SwitchDemo()
+    w.show()
+    sys.exit(app.exec())
