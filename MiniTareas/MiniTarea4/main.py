@@ -1,45 +1,49 @@
 import sys
-from PySide6.QtWidgets import QApplication, QWidget, QLabel, QHBoxLayout, QVBoxLayout
+from PySide6.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QHBoxLayout
 from PySide6.QtGui import QPixmap
-import resources_rc  # importa el fichero generado por pyside6-rcc
+import resources_rc  # 🔹 importa el archivo generado por pyside6-rcc
 
 
-class EmpresaConIcono(QWidget):
+class ProductoConIcono(QWidget):
     """
-    Variante de 'Empresa' que añade un logo usando recursos Qt (:/icons/...)
+    Clase que representa un producto con su icono, nombre y precio.
     """
-    def __init__(self, nombre: str, direccion: str, icono_path: str = ":/icons/logo1.png", parent=None):
+    def __init__(self, nombre: str, precio: str, icono_path: str = "icons/laptop.png", parent=None):
         super().__init__(parent)
 
-        # (1) Logo
-        self.__logo_lbl = QLabel()
-        self.__logo_lbl.setFixedSize(60, 60)
-        self.__logo_lbl.setScaledContents(True)
-        self.__logo_lbl.setPixmap(QPixmap(icono_path))
+        # --- Icono ---
+        self.__icono_lbl = QLabel()
+        self.__icono_lbl.setFixedSize(60, 60)
+        self.__icono_lbl.setScaledContents(True)
+        self.__icono_lbl.setPixmap(QPixmap(icono_path))
 
-        # (2) Textos
+        # --- Textos ---
         self.__nombre_lbl = QLabel(nombre)
-        self.__direccion_lbl = QLabel(direccion)
+        self.__precio_lbl = QLabel(precio)
 
-        textos = QVBoxLayout()
-        textos.addWidget(self.__nombre_lbl)
-        textos.addWidget(self.__direccion_lbl)
+        # Layout para textos (vertical)
+        texto_layout = QVBoxLayout()
+        texto_layout.addWidget(self.__nombre_lbl)
+        texto_layout.addWidget(self.__precio_lbl)
 
-        # (3) Layout final
-        root = QHBoxLayout(self)
-        root.addWidget(self.__logo_lbl)
-        root.addLayout(textos)
+        # Layout principal (horizontal)
+        layout = QHBoxLayout(self)
+        layout.addWidget(self.__icono_lbl)
+        layout.addLayout(texto_layout)
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    w = QWidget()
-    w.setWindowTitle("Mini 4 - Empresa con icono (recursos Qt)")
-    lay = QVBoxLayout(w)
+    ventana = QWidget()
+    ventana.setWindowTitle("Mini 4 – Productos con icono")
 
-    lay.addWidget(EmpresaConIcono("PinApple", "C/ Sin nombre, 00000", icono_path=":/icons/logo1.png"))
-    lay.addWidget(EmpresaConIcono("Toogle", "C/ Sin hielo, 33333", icono_path=":/icons/logo2.png"))
+    layout = QVBoxLayout(ventana)
 
-    w.show()
-    app.exec()
+    # --- Tres productos con iconos distintos ---
+    layout.addWidget(ProductoConIcono("Portátil ZenAir", "799 €", icono_path="icons/laptop.png"))
+    layout.addWidget(ProductoConIcono("Ratón Ergonomic", "25 €", icono_path="icons/mouse.png"))
+    layout.addWidget(ProductoConIcono("Teclado Gamer RGB", "99 €", icono_path="icons/keyboard.png"))
+
+    ventana.show()
+    sys.exit(app.exec())
