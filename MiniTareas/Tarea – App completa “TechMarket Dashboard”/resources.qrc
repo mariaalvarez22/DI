@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file>icons/laptop.png</file>
+    <file>icons/mouse.png</file>
+    <file>icons/keyboard.png</file>
+  </qresource>
+</RCC>
