@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Informe 02 - Ordenación y Filtrado</title>
+<style>
+    body { font-family: Arial; margin: 30px; }
+    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background: #f2f2f2; }
+    h1 { margin-bottom: 0; }
+    p { color: #555; margin-top: 5px; }
+</style>
+</head>
+<body>
+<h1>Informe 02 - Ordenación y Filtrado</h1>
+<p>Tablas generadas con Pandas (HTML local)</p>
+ 
+  <h2>1) Tabla original</h2>
+  <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Comercial</th>
+      <th>Mes</th>
+      <th>Unidades</th>
+      <th>Importe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Antía</td>
+      <td>Enero</td>
+      <td>12</td>
+      <td>2400</td>
+    </tr>
+    <tr>
+      <td>Antía</td>
+      <td>febrero</td>
+      <td>9</td>
+      <td>1900</td>
+    </tr>
+    <tr>
+      <td>Antía</td>
+      <td>marzo</td>
+      <td>15</td>
+      <td>3100</td>
+    </tr>
+    <tr>
+      <td>Máximo</td>
+      <td>Enero</td>
+      <td>7</td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>Máximo</td>
+      <td>febrero</td>
+      <td>11</td>
+      <td>2300</td>
+    </tr>
+    <tr>
+      <td>Máximo</td>
+      <td>marzo</td>
+      <td>6</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>Enero</td>
+      <td>20</td>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>febrero</td>
+      <td>18</td>
+      <td>3600</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>marzo</td>
+      <td>22</td>
+      <td>4400</td>
+    </tr>
+  </tbody>
+</table>
+ 
+  <h2>2) Ordenada por Importe (desc)</h2>
+  <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Comercial</th>
+      <th>Mes</th>
+      <th>Unidades</th>
+      <th>Importe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bryan</td>
+      <td>Enero</td>
+      <td>20</td>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <td>Antía</td>
+      <td>Enero</td>
+      <td>12</td>
+      <td>2400</td>
+    </tr>
+    <tr>
+      <td>Máximo</td>
+      <td>Enero</td>
+      <td>7</td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>febrero</td>
+      <td>18</td>
+      <td>3600</td>
+    </tr>
+    <tr>
+      <td>Máximo</td>
+      <td>febrero</td>
+      <td>11</td>
+      <td>2300</td>
+    </tr>
+    <tr>
+      <td>Antía</td>
+      <td>febrero</td>
+      <td>9</td>
+      <td>1900</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>marzo</td>
+      <td>22</td>
+      <td>4400</td>
+    </tr>
+    <tr>
+      <td>Antía</td>
+      <td>marzo</td>
+      <td>15</td>
+      <td>3100</td>
+    </tr>
+    <tr>
+      <td>Máximo</td>
+      <td>marzo</td>
+      <td>6</td>
+      <td>1200</td>
+    </tr>
+  </tbody>
+</table>
+ 
+  <h2>3) Filtrada: Importe >= 3000</h2>
+  <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Comercial</th>
+      <th>Mes</th>
+      <th>Unidades</th>
+      <th>Importe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Antía</td>
+      <td>marzo</td>
+      <td>15</td>
+      <td>3100</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>Enero</td>
+      <td>20</td>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>febrero</td>
+      <td>18</td>
+      <td>3600</td>
+    </tr>
+    <tr>
+      <td>Bryan</td>
+      <td>marzo</td>
+      <td>22</td>
+      <td>4400</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
