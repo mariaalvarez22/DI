@@ -32,4 +32,5 @@ salida.write_text(html, encoding="utf-8")
 print(f"\n✅ Informe guardado en: {salida.resolve()}")
 
 # 6) Abrir en el navegador
+
 webbrowser.open(salida.resolve().as_uri())
