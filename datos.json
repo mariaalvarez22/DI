@@ -1,0 +1,9 @@
+[
+  {"grupo": "Coldplay", "album": "Parachutes", "año": 2000, "canciones": 10, "duracion_min": 42},
+  {"grupo": "Coldplay", "album": "A Rush of Blood to the Head", "año": 2002, "canciones": 11, "duracion_min": 55},
+  {"grupo": "Coldplay", "album": "X&Y", "año": 2005, "canciones": 13, "duracion_min": 62},
+  {"grupo": "Coldplay", "album": "Viva la Vida", "año": 2008, "canciones": 10, "duracion_min": 45},
+  {"grupo": "Coldplay", "album": "Mylo Xyloto", "año": 2011, "canciones": 14, "duracion_min": 44},
+  {"grupo": "Coldplay", "album": "Ghost Stories", "año": 2014, "canciones": 9, "duracion_min": 42},
+  {"grupo": "Coldplay", "album": "A Head Full of Dreams", "año": 2015, "canciones": 11, "duracion_min": 45}
+]
